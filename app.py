@@ -19,4 +19,4 @@ def home():
     return render_template("home.html", posts=posts)
 
 if __name__ == "__main__":
-    app.run(port=os.getenv("bind"))
+    app.run(port=os.getenv("PORT"))
