@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dogs Avenue</title>
+        <meta name="description" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Custom css link-->
+        <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+             <!--cat section starts-->
+
+             <section class="dog">
+
+                <div class="dogHeading">
+                    <h1>Dog Avenue</h1>
+                </div>
+    
+                <div class="dogContainer">
+    
+                    <div class="dogBox">
+                        {% for post in posts %}
+                            <div class="dogImg">
+                                <img src="https://cdn2.thedogapi.com/images/{{post.reference_image_id}}.jpg" />
+                            </div>
+                            <div class="dogText">
+                                <h1>{{post.name}}</h1>
+                                <p>Bred for: {{post.bred_for}}.</p>
+                                <p>Temperament : {{post.temperament}}.</p>
+                                <p>Life Span : {{post.life_span}}</p>
+                            </div>
+
+                        {% endfor %}
+    
+                    </div>
+    
+                </div>
+               
+            </section>
+    <!--cat section ends-->
+        
+    </body>
+</html>
