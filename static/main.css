@@ -58,6 +58,13 @@ body{
     font-weight: 600;
 }
 
+.dogHeading p{
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 3rem;
+    font-weight: 6;
+}
+
 .dogContainer
 {
     align-items: center;
